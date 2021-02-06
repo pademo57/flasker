@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+    <p>This is the index page </p>
+    <!-- The fourth item in the list [3] is 41 and we can add 100 to it -->
+    <h3>Favourite Pizza</h3>
+    {% for item in favourite_pizza %}
+        {% if item == 41 %}
+            {{ item + 100 }}<br/>
+        {% else %}
+            {{ item }}<br/>
+        {% endif %}
+    {% endfor %}
+
+<br/>
+<!-- Using a filter with Jinja e.g. reverse on the first item in the favourite list -->
+{{ favourite_pizza.0|reverse }}
+
+
+</body>
+</html>
